@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
+
+:root{
+        /* Primary */
+
+    --Scissors-Gradient: hsl(39, 89%, 49%) , hsl(40, 84%, 53%);
+    --Paper-Gradient: hsl(230, 89%, 62%) , hsl(230, 89%, 65%);
+    --Lizard-Gradient: hsl(261, 73%, 60%) , hsl(261, 72%, 63%);
+    --Cyan: hsl(189, 59%, 53%) , hsl(189, 58%, 57%);
+    --Rock-Gradient:( hsl(349, 71%, 52%) ,hsl(349, 70%, 56%) ) ;
+      
+    /* Neutral */
+
+    --Dark-Text: hsl(229, 25%, 31%);
+    --Score-Text: hsl(229, 64%, 46%);
+    --Header-Outline: hsl(217, 16%, 45%);
+
+    /* Background */
+
+    --Radial-Gradient: hsl(214, 47%, 23%), hsl(237, 49%, 15%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background: linear-gradient( hsl(214, 47%, 23%) ,hsl(237, 49%, 15%) ) no-repeat;
+    width: 100vw;
+    overflow-x: hidden;
+    
+}
+
+           /* top section */
+
+
+.top{
+    border: 3px solid var(--Header-Outline);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 335px;
+    margin: 30px auto;
+    padding: 20px 25px;
+}
+.top img{
+   width: 70px;
+}
+.sco{
+   background:  white;
+   padding: 10px 25px;
+   text-align: center;
+   border-radius: 8px;
+}
+.sco h5{
+    font-size: 12px;
+    opacity: 0.6;
+ }
+.sco h1{
+   font-size: 35px;
+   opacity: 0.7;
+}
+
+
+           /* middle section */
+
+
+.gm{
+
+   /* display: none; */
+
+}
+        
+        
+              /* gameover section */
+
+.gameover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 240px;
+    height: 150px;
+    position: absolute;
+    left: 30px;
+    bottom: -40px;
+    display: none;
+}
+.gameover h1{
+    font-size: 60px; 
+    color: white;
+    margin-bottom: 10px;
+}
+.gameover button{
+    color: rgba(0, 0, 0, 0.75);
+    font-size: 15px;
+    background: white;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 60px;
+}
+
+              /* in game section */
+
+.ingame{
+    display: flex;
+    justify-content: space-between;
+    height: 240px;
+    text-align: start ;
+    display: none;
+}
+.player h1{
+    color: white ;
+    font-size: 15px;
+    margin-top: 140px;
+}
+.thp h1{
+    color: white ;
+    font-size: 15px;
+    margin-top: 140px;
+    text-align: end;
+}
+
+.player{
+    width: 50%;
+}
+
+.player div{
+    top: inherit;
+    right: inherit;
+    left: -20px;
+   bottom: 220px;
+   transform: scale(1.3);
+   pointer-events: none;
+}
+
+
+.thp{
+    width: 50%;
+}
+.thp div{
+    top: inherit;
+    left: inherit;
+    right: -10px;
+    bottom: 220px;
+    transform: scale(1.3);
+    pointer-events: none;
+}
+
+
+.mid{
+    width: 300px;
+    height: 300px;
+    margin: 90px auto;
+    position: relative;
+}
+.bg img{
+    width: 100%;
+}
+
+.lo{
+    width: 100px;
+    height: 100px;
+    background: rgb(255, 255, 255);
+    border-radius: 100px;
+    text-align: center;
+    position: absolute;
+    border: 15px solid;
+}
+.lo:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.lo img{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform:translate(-50% , -50%);
+   width: 35px;
+}
+
+.sic{
+    top: -30px;
+    left: 100px;
+    border-color: hsl(39, 89%, 49%);
+}
+.roc{
+    bottom: -20px;
+    right: 25px;
+    border-color: hsl(349, 71%, 52%) ;
+}
+.liz{
+    bottom: -20px;
+    left: 25px;
+    border-color: hsl(261, 73%, 60%);
+}
+
+
+.pap{
+    top: 70px;
+    right: -30px;
+    border-color: hsl(230, 89%, 62%);
+}
+.spo{
+    top: 70px;
+    left: -30px;
+    border-color: hsl(189, 59%, 53%);
+} 
+
+
+           /* bottom section */
+
+
+.bot{
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.rulesbtn{
+    font-size: 17px;
+    color: white;
+    padding: 12px 30px;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* rule sec */
+
+.rulescard{
+
+    z-index: 9999;
+    position: absolute;
+    top: 0;
+    background: white;
+    width: 100vw;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+    display: none;
+}
+.closerul{
+    background:none;
+    border: 3px solid rgba(0, 0, 0, 0.22);
+    padding: 10px;
+    border-radius: 10px;
+}
+.rulescard h1{
+    font-size:35px ;
+    margin-bottom: 60px;
+    opacity: 0.6;
+    margin-top: 50px;
+}
+.ri{
+    width: 90%;
+    max-width: 400px;
+    margin-bottom: 100px;
+}
+
+@media(min-width:950px){
+  
+      .top{
+          width: 500px;
+      }
+
+      .mid{
+          margin-top: 70px;
+      }
+      .ingame{
+          position: absolute;
+          width: 750px;
+          top: 30%;
+          left:50% ;
+          transform:translate(-50% , -50%);
+      }
+
+      .player h1{
+        font-size: 25px;
+        padding-left: 15px;
+        margin-top: 0;
+      }
+      .player div{
+        top: inherit;
+        left: inherit;
+        left: 30px;
+        bottom: 0px;
+        transform: scale(2.3); 
+    }
+
+      .thp h1{
+        font-size: 25px;
+        text-align: end; 
+        padding-right: 15px;
+        margin-top: 0;
+       }
+
+       .thp div{
+        top: inherit;
+        left: inherit;
+        right: 30px;
+        bottom: 0px;
+        transform: scale(2.3);
+        }
+
+
+      .gameover{
+        bottom: 50px;
+      }
+
+      .bot{
+          margin-bottom: 10px;
+      }
+      .rulesbtn{
+      position: relative;
+      top: -50px;
+      right: -370px;
+      }
+      .rulescard{
+          width: 350px;
+          height: 365px;
+          top: 45%;
+          left:50% ;
+          transform:translate(-50% , -50%);
+          border-radius: 30px;
+          box-shadow: 0px 0px 200px  rgba(0, 0, 0, 0.616);
+       }
+
+      .rulescard h1{
+          margin: 10px 0 20px 30px;
+          text-align: left;
+      }
+      .ri{
+          position: relative;
+          left: 25px;
+          width: 250px;
+          margin: 0;
+        }
+      .closerul{
+        position: relative;
+          top: -260px;
+          right: 10px;
+      }
+
+}
+
