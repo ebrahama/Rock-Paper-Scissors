@@ -67,13 +67,6 @@ body{
 
 
            /* middle section */
-
-
-.gm{
-
-   /* display: none; */
-
-}
         
         
               /* gameover section */
@@ -82,13 +75,13 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     flex-direction: column;
     width: 240px;
     height: 150px;
     position: absolute;
     left: 30px;
-    bottom: -40px;
-    display: none;
+    bottom: -70px;
 }
 .gameover h1{
     font-size: 60px; 
@@ -98,6 +91,7 @@ body{
 .gameover button{
     color: rgba(0, 0, 0, 0.75);
     font-size: 15px;
+    font-weight: 700;
     background: white;
     border: none;
     border-radius: 10px;
@@ -106,47 +100,46 @@ body{
 
               /* in game section */
 
-.ingame{
-    display: flex;
-    justify-content: space-between;
+.ingame{        
     height: 240px;
-    text-align: start ;
-    display: none;
+    position: absolute;
+    width: 300px;
 }
 .player h1{
     color: white ;
     font-size: 15px;
-    margin-top: 140px;
 }
 .thp h1{
     color: white ;
     font-size: 15px;
-    margin-top: 140px;
     text-align: end;
 }
 
 .player{
-    width: 50%;
+    width:max-content;
+    margin: 130px 0px 0px 0px;
+     
 }
 
 .player div{
     top: inherit;
     right: inherit;
     left: -20px;
-   bottom: 220px;
+   bottom: 150px;
    transform: scale(1.3);
    pointer-events: none;
 }
 
 
 .thp{
-    width: 50%;
+    width:max-content;
+    margin: 0px 0px 0px 200px;
 }
 .thp div{
     top: inherit;
     left: inherit;
     right: -10px;
-    bottom: 220px;
+    bottom: 150px;
     transform: scale(1.3);
     pointer-events: none;
 }
@@ -155,8 +148,9 @@ body{
 .mid{
     width: 300px;
     height: 300px;
-    margin: 90px auto;
+    margin: 0px auto 185px auto;
     position: relative;
+    top: 80px;
 }
 .bg img{
     width: 100%;
@@ -217,7 +211,7 @@ body{
 
 .bot{
     text-align: center;
-    margin-bottom: 100px;
+    margin-bottom: 70px;
 }
 
 .rulesbtn{
@@ -229,6 +223,17 @@ body{
     border-radius: 10px;
     cursor: pointer;
     margin-top: 10px;
+}
+
+
+.gm{
+    display: block;
+}
+.gameover{
+    display: none;
+}
+.ingame{
+    display: none;
 }
 
 /* rule sec */
@@ -272,7 +277,7 @@ body{
       }
 
       .mid{
-          margin-top: 70px;
+          margin-top: 0px;
       }
       .ingame{
           position: absolute;
@@ -281,6 +286,13 @@ body{
           left:50% ;
           transform:translate(-50% , -50%);
       }
+
+      .player{
+        margin: 0px 0px 0px -5px;
+      }
+      .thp{
+        margin: -30px 0px 0px 550px;
+    }
 
       .player h1{
         font-size: 25px;
@@ -312,7 +324,7 @@ body{
 
 
       .gameover{
-        bottom: 50px;
+        bottom: 75px;
       }
 
       .bot{
@@ -320,7 +332,7 @@ body{
       }
       .rulesbtn{
       position: relative;
-      top: -50px;
+      top: -90px;
       right: -370px;
       }
       .rulescard{
@@ -350,4 +362,3 @@ body{
       }
 
 }
-
